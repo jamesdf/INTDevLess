@@ -1,0 +1,300 @@
+body{
+  font-family: Arial, Helvetica, sans-serif; // 3/10/15
+
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+	padding: 20px 0;
+  font-size: 100%;    // 3/10/15
+}
+
+/* JLH 2/4/15 gives blue background on sides with white main  */
+
+#bgwrap {
+  background: @bgwrapbg;   //#ffffff; 
+  padding: 40px 40px 40px 40px;
+}
+
+    // jlh jdf 2/11/15 copied from type.less and adjusted the formulas
+     
+    h1 { font-size: @baseFontSize * 1.5; } // ~24px
+    h2 { font-size: @baseFontSize * 1.1; } // ~18px
+    h3 { font-size: @baseFontSize ; } // ~16px
+    h4 { font-size: @baseFontSize; } // ~16px
+    h5 { font-size: @baseFontSize; } // 16px
+    h6 { font-size: @baseFontSize; } // ~16px
+
+/* Misc */
+
+span.int {
+  font-style: italic;
+}
+
+
+div.accordion-heading > h2 {
+    line-height: 20px;
+}
+
+div.accordion-heading > h2 > a:hover, 
+  div.accordion-heading > h2 > a:focus {
+    color: @intlogo;
+}
+
+
+.navbar {
+  margin-bottom: 10px;
+}
+
+/* Styling breadcrumbs */
+
+.breadcrumb {
+    background-color: #ffffff;
+    border-radius: 0;
+    list-style: none outside none;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+
+/* JLH 2/4/15 menu bar - styles top & bottom borders, removes left and right border, makes straight corners, removes shadow below border line */
+
+.navbar-inner {
+  padding: 0 20px 0 2px;
+  border-top: 2px solid @intmenuborder;
+  border-bottom: 2px solid @intmenuborder;
+  border-left: 0px solid @intmenuborder;
+  border-right: 0px solid @intmenuborder;
+    -webkit-border-radius: 0px;
+     -moz-border-radius: 0px;
+          border-radius: 0px;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffffffff', GradientType=0);
+  *zoom: 1;
+  -webkit-box-shadow: 0 1px 0px rgba(0, 0, 0, 0.065);
+     -moz-box-shadow: 0 1px 0px rgba(0, 0, 0, 0.065);
+          box-shadow: 0 1px 0px rgba(0, 0, 0, 0.065);
+
+}
+
+    /* from protostart template.less
+    /* Navigation Submenus */
+    // The dropdown menu (ul)
+    // ----------------------
+    nav {
+      .nav-child {
+        position: absolute;
+        top: 95%;
+        left: 0;
+        z-index: @zindexDropdown;
+        display: none; // none by default, but block on "open" of the menu
+        float: left;
+        min-width: 160px;
+        padding: 5px 0;
+        margin: 2px 0 0; // override default ul
+        list-style: none;
+        background-color: @dropdownBackground;
+        border: 1px solid #ccc; // Fallback for IE7-8
+        border: 1px solid @dropdownBorder;
+        *border-right-width: 2px;
+        *border-bottom-width: 2px;
+        .border-radius(6px);
+        .box-shadow(0 5px 10px rgba(0,0,0,.2));
+    
+        -webkit-background-clip: padding-box;
+         -moz-background-clip: padding;
+              background-clip: padding-box;
+        
+        // Aligns the dropdown menu to right
+        &.pull-right {
+          right: 0;
+          left: auto;
+        }
+        
+        // Dividers (basically an hr) within the dropdown
+        .divider {
+          .nav-divider(@dropdownDividerTop, @dropdownDividerBottom);
+        }
+        
+        // Links within the dropdown menu
+        a {
+          display: block;
+          padding: 3px 20px;
+          clear: both;
+          font-size: @baseFontSize;
+          font-weight: normal;
+          line-height: @baseLineHeight;
+          color: @intaccent2; /* jlh 2/11/15       color: @dropdownLinkColor; */
+          white-space: nowrap;
+        }
+      }
+      .nav > li {
+        position: relative;
+      }
+      .nav > li:hover > .nav-child,
+      .nav > li > a:focus + .nav-child, {
+        display: block;
+      }
+      .nav-child:before {
+        position: absolute;
+        top: -7px;
+        left: 9px;
+        display: inline-block;
+        border-right: 7px solid transparent;
+        border-bottom: 7px solid #ccc;
+        border-left: 7px solid transparent;
+        border-bottom-color: rgba(0, 0, 0, 0.2);
+        content: '';
+      }
+      .nav-child:after {
+        position: absolute;
+        top: -6px;
+        left: 10px;
+        display: inline-block;
+        border-right: 6px solid transparent;
+        border-bottom: 6px solid #ffffff;
+        border-left: 6px solid transparent;
+        content: '';
+      }
+    }
+    
+    // Hover state
+    // -----------
+    nav .nav-child li > a:hover,
+    nav .nav-child li > a:focus,
+    nav .nav-child:hover > a {
+      text-decoration: none;
+      color: @intlogo; /* jlh 2/11/15  color: @dropdownLinkColorHover; */
+      background-color: @white;  /* jlh 2/11/15 background-color: @dropdownLinkBackgroundHover; */
+    /* jlh don't know what it does - #gradient > .vertical(@dropdownLinkBackgroundHover, darken(@dropdownLinkBackgroundHover, 5%)); */
+    }
+
+
+
+/* Moves the phone number on the top right flush to right side. */
+
+.custom {
+  float:right;
+}
+
+/* JLH 2/4/15  Custom Banner - carousel - top of home page. fixes bottom of tail letters being cut off. makes text blue and big */
+  .carousel {
+    line-height: 1.25;
+    margin-bottom: 0;
+    color: @intlogo; //#00009c;
+    font-size: 1.5em;
+    text-align: center;
+
+  }
+
+  /* Adds extra spacing between header and menu */
+
+  header {
+  min-height: 60px;
+}
+
+/* Accordian styling adjustments */
+
+div.accordion-heading > h2 > a {
+  font-size: 18px;
+
+}
+div.accordion-heading > h2 {
+    margin: 0;
+    padding: 2.5px 0;
+}
+
+/*styling footer 8/22/14 jlh*/
+
+footer {
+  color: @intlogo; //#00009C;
+  border-top: 2px solid @intmenuborder; //#c6c6c6;
+  margin-top: 40px;
+  
+}
+
+footer > p {
+  margin: 20px 0 0 0;
+}
+
+      /* Max width: define pixel width for nav-bar to collapse to hamburger. Also, make submenu's not look like bubbles and overlap. Just have them expanded */
+      @media (max-width: @navbarCollapseWidth) {  // 1251px) {
+          /*nav bar drop down taken from protostar*/
+          
+          nav .nav-child {
+              position: static;
+              top: auto;
+              left: auto;
+              z-index: 1000;
+              display: block;
+              float: none;
+              min-width: 160px;
+              padding: 5px 0;
+              margin: 2px 0 0;
+              list-style: none;
+              background-color: #fff; /*transparent;*/
+              border: 0px solid #ccc;
+              border: 0px solid rgba(0,0,0,0.2);
+              *border-right-width: 0px;
+              *border-bottom-width: 0px;
+              -webkit-border-radius: 0px;
+              -moz-border-radius: 0px;
+              border-radius: 0px;
+              -webkit-box-shadow: none;
+              -moz-box-shadow: none;
+              box-shadow: none;
+              -webkit-background-clip: padding-box;
+              -moz-background-clip: padding;
+              background-clip: padding-box;
+          }
+          
+          
+            
+          nav ul.nav-child a {
+              font-size: 16px;
+            }
+          
+          .navbar .nav > li > a:focus,
+          .navbar .nav > li > a:hover {
+           background-color: transparent ;
+           color: @intlogo; // #00009c;
+          }  
+          
+          nav .nav-child:before,
+            .nav-child:after {
+              display: none;
+            }
+      
+          /* 4/7/14 Start change for sub sub item.. */
+          nav ul.nav-child ul.nav-child a {
+              padding: 0 0 0 30px;
+              color: 3399ff;
+          }
+      
+           nav ul.nav-child ul.nav-child ul.nav-child a {
+              padding: 0 0 0 40px;
+          }
+          
+          /*  4/7/14 end change for sub sub item */  
+      } /* end of media for 979px */
+            /*8/28/14 jlh  @media for phone size to: change graphic, remove carousel banner, remove extra "padding/margin" from site */
+          /* Landscape phones and down */
+      @media (max-width: 480px) { 
+        body{
+          max-width: 95%;
+        }  
+          
+        #bgwrap {
+          padding: 5px;
+        }  
+          
+        .navbar-inner {
+                padding-left: 5px;
+                padding-right: 5px;
+        }    
+          
+            div.customtbanner {
+            display: none;
+            }
+      
+             .well {
+              display: none;
+            }
+      }  /*end media  max 480 */

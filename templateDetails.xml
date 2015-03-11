@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
+<extension version="3.1" type="template" client="site">
+        <name>INTBordersLess</name>
+        <version>1.0</version>
+        <creationDate>2/10/2014</creationDate>
+        <author>Jen Hare</author>
+        <authorEmail>jen@intinfo.com</authorEmail>
+        <copyright>Copyright (c) 2014 INT Information Systems, Inc. All Rights Reserved</copyright>
+        <description>jenstemplate</description>
+        <files>
+                <filename>index.php</filename>
+                <filename>templateDetails.xml</filename>
+        <folder>css</folder>
+		<folder>html</folder>
+		<folder>images</folder>
+		<folder>img</folder>
+		<folder>js</folder>
+		<folder>less</folder>
+
+        </files>
+        <positions>
+                <position>header</position>
+          		<!-- 3/18/14 <position>contactpic</position> 3/18/14 -->
+                <position>contact</position>
+                <position>menubar</position>               
+                <position>tbanner</position>               
+                <position>breadcrumbs</position>
+                <position>left</position>
+                <position>right</position>
+                <position>footer</position>
+        </positions>
+  </extension>

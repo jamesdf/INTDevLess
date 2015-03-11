@@ -1,0 +1,123 @@
+/**
+ * @copyright	Copyright (C) 2005 - 2013 Open Source Matters, Inc. All rights reserved.
+ * @license		GNU General Public License version 2 or later; see LICENSE.txt
+ */
+
+body {
+	background: #fff;
+	font-family: Tahoma,Helvetica,Arial,sans-serif;
+	line-height: 1.3em;
+	font-size: 76%;
+	color: #333;
+}
+
+.h3.inth3 {
+  color: #0088CC
+}
+
+h1 {
+	font-family:Helvetica ,Arial,sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #666;
+}
+
+h2 {
+	font-family: Arial, Helvetica,sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	color: #333;
+}
+
+h3 {
+  font-weight: bold;
+  font-family: Helvetica,Arial,sans-serif;
+  font-size: 11px;
+  color: #135cae;
+}
+
+h4 {
+	font-weight: bold;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #135cae;
+    <!-- color: #333; -->
+}
+
+a:link, a:visited {
+	color: #1B57B1; text-decoration: none;
+	font-weight: normal;
+}
+
+a:hover {
+	color: #00c;	
+  text-decoration: underline;
+	font-weight: normal;
+}
+
+div.caption       { padding: 0 10px 0 10px; }
+div.caption img   { border: 1px solid #CCC; }
+div.caption p     { font-size: .90em; color: #666; text-align: center; }
+
+/* STYLES FOR JOOMLA! EDITOR */
+hr#system-readmore  { border: red dashed 1px; color: red; }
+hr.system-pagebreak { border: gray dashed 1px; color: gray; }
+
+/*styles for images from bootstrap jlh */
+
+.img-responsive {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+.img-rounded {
+  border-radius: 6px;
+}
+
+.img-thumbnail {
+  display: inline-block;
+  height: auto;
+  max-width: 100%;
+  padding: 4px;
+  line-height: 1.428571429;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  -webkit-transition: all 0.2s ease-in-out;
+          transition: all 0.2s ease-in-out;
+}
+
+.img-circle {
+  border-radius: 50%;
+}
+
+/* styles for term and definition paragraphs */
+.dl-horizontal {
+  *zoom: 1;
+}
+
+.dl-horizontal:before,
+.dl-horizontal:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+
+.dl-horizontal:after {
+  clear: both;
+}
+
+.dl-horizontal dt {
+  float: left;
+  width: 160px;
+  overflow: hidden;
+  clear: left;
+  text-align: right;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dl-horizontal dd {
+  margin-left: 180px;
+}
+
