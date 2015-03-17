@@ -1,5 +1,6 @@
 <?php
 defined('_JEXEC') or die;
+// 3/12/15 Added THIS comment to test updating in GIT
 // 11/3/14 Changed refrences from '../j333/' to '../'
 // Add JavaScript Frameworks
 JHtml::_('bootstrap.framework');
