@@ -1,5 +1,6 @@
 <?php
 defined('_JEXEC') or die;
+// 3/17/15 JDF In honor of St Patrick's Day I will make a drunken change to this (index.php) by just adding this comment
 // 3/12/15 Added THIS comment to test updating in GIT
 // 11/3/14 Changed refrences from '../j333/' to '../'
 // Add JavaScript Frameworks
