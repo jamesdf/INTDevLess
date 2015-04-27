@@ -22,7 +22,8 @@ JHtmlBootstrap::loadCss($includeMaincss = false);
 
  		<!-- replaced 12.11.14 JDF <link href="templates/INTBorders/css/custom.css" rel="stylesheet" type="text/css"> -->
  		<!-- replaced 3/9/15 <link href="<?php echo $this->baseurl?>/templates/<?php echo $this->template;?>/css/custom.css" rel="stylesheet" type="text/css">-->
-		<link href="<?php echo $this->baseurl?>/templates/<?php echo $this->template;?>/css/template.css" rel="stylesheet" type="text/css">
+		<!-- 4/24/15 use the minified template css -->
+		<link href="<?php echo $this->baseurl?>/templates/<?php echo $this->template;?>/css/template.min.css" rel="stylesheet" type="text/css">
 
 	</head>
 
@@ -32,18 +33,19 @@ JHtmlBootstrap::loadCss($includeMaincss = false);
 		  <header class="row-fluid">    
             <!-- 1/28/14 Allegedly: visible-lg-block, (lg, md, sm, xs) and hidden-lg-block (lg, md, sm, xs) -- replace: visible-desktop visible-tabloid, etc. HOWEVER, for us phone, desktop and tabloid seem to be the only ones working -->
 				<!--  3/11/15 <div class="span10 visible-desktop visible-tabloid hidden-phone">-->
-				<div class="span8 visible-desktop visible-tabloid hidden-phone">
+				<div class="span9 visible-desktop visible-tablet hidden-phone">
 		             <!-- replaced 12.11.14 JDF	<a href="../index.php/homepage"><img src="templates/INTBorders/images/header.png" alt="INT Information Systems, Inc. Click for Home. " class="pull-left"/></a></div> -->
                   <!-- 1/27/15 <a href="<?php echo $this->baseurl?>"><img src="<?php echo $this->baseurl?>/templates/<?php echo $this->template;?>/images/header.png" alt="INT Information Systems, Inc. Click for Home. " class="pull-left"/></a></div> 1/27/15 -->
 					<a href="<?php echo $this->baseurl?>"><img src="<?php echo $this->baseurl?>/templates/<?php echo $this->template;?>/images/header.png" alt="INT Information Systems, Inc. Click for Home. "/></a>
             	</div>
             <!-- 1/28/15 Added "visible-" class changes (above and below) to attempt to change the graphic for smaller browser sizes -->
-				<div class="span8 visible-phone hidden-desktop hidden-tabloid">
+				<div class="span9 visible-phone hidden-desktop hidden-tablet">
 					<a href="<?php echo $this->baseurl?>"><img src="<?php echo $this->baseurl?>/templates/<?php echo $this->template;?>/images/headersmall.png" alt="INT Information Systems, Inc. Click for Home. "/></a>
             	</div>
-            
-                  <div class="span2" ><jdoc:include type="modules" name="contact" style="html5" class="pull-right"/></div>
+            		<!-- 4/27/15 remove pullright                   <div class="span3" ><jdoc:include type="modules" name="contact" style="html5" class="pull-right"/></div> -->
+                  <div id="phone" class="span3" >740.587.3827 </div>
                   <!-- 1/27/15 <div class="offset2" ><jdoc:include type="modules" name="contact" style="html5"/></div> -->
+              	   <!--4/27/15   <div class="span3" ><jdoc:include type="modules" name="contact" style="html5"/></div>-->
           </header>
 	        
 			<!-- //*responsive nav bar  -->     

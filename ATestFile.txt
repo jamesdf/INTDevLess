@@ -4,3 +4,5 @@
 3/17/15 Added a new file to the INTBordersLess folder to see how Git reacts to it.
 3/20/15 This text is on my local. Hopefully it will eventually find it's way back into James's github repo.
 >>>>>>> origin/master
+3/23/15 JDF I probably did a merge pull and got Jen's change but wtf is up with the << and >> lines that Git added???
+	So now I am going to try to add these two lines ... with comments? I hope!

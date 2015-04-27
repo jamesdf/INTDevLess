@@ -55,6 +55,11 @@ div.accordion-heading > h2 > a:hover,
     padding: 0 0 0 0;
 }
 
+/*jlh 4/27/15 adjust padding between main menu items so menu collapse can be smaller than 1250px */
+.navbar .nav > li > a {
+       padding: 10px;
+}
+
 /* JLH 2/4/15 menu bar - styles top & bottom borders, removes left and right border, makes straight corners, removes shadow below border line */
 
 .navbar-inner {
@@ -132,6 +137,9 @@ div.accordion-heading > h2 > a:hover,
       .nav > li > a:focus + .nav-child, {
         display: block;
       }
+
+
+
       .nav-child:before {
         position: absolute;
         top: -7px;
@@ -169,9 +177,11 @@ div.accordion-heading > h2 > a:hover,
 
 
 /* Moves the phone number on the top right flush to right side. */
-
-.custom {
-  float:right;
+/* 4/27/15 .custom { */
+ #phone {
+  float: right;
+  line-height: 36px;
+  color: @intlogo;
 }
 
 /* JLH 2/4/15  Custom Banner - carousel - top of home page. fixes bottom of tail letters being cut off. makes text blue and big */
@@ -199,6 +209,17 @@ div.accordion-heading > h2 > a {
 div.accordion-heading > h2 {
     margin: 0;
     padding: 2.5px 0;
+}
+/* 4/24/15 */
+.item-pageTrainingClasses h3 {
+    margin-top: 10px;
+    margin-bottom:0;
+    padding: 2.5px 0;
+}
+
+/* 4/24/15 */
+.item-pageTrainingClasses div.accordion-heading > a {
+    padding-top: 0;
 }
 
 /*styling footer 8/22/14 jlh*/
@@ -256,7 +277,9 @@ footer > p {
            background-color: transparent ;
            color: @intlogo; // #00009c;
           }  
+        
           
+
           nav .nav-child:before,
             .nav-child:after {
               display: none;
@@ -274,8 +297,18 @@ footer > p {
           
           /*  4/7/14 end change for sub sub item */  
       } /* end of media for 979px */
+
+
+      @media (max-width: 769px){
+                  /* 4/27/15 formerly  .custom{  header phone number align left on phone */
+            #phone{
+              float: left;
+            }
+      }
+
             /*8/28/14 jlh  @media for phone size to: change graphic, remove carousel banner, remove extra "padding/margin" from site */
           /* Landscape phones and down */
+
       @media (max-width: 480px) { 
         body{
           max-width: 95%;
@@ -296,5 +329,10 @@ footer > p {
       
              .well {
               display: none;
+            }
+
+            /* 4/27/15  formly .contact header phone number align left on phone */
+            #phone{
+              float: left;
             }
       }  /*end media  max 480 */
