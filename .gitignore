@@ -1,0 +1,4 @@
+# here is where we will tell Git what to ignore.
+# 4/27/15 JDF I think Less/Junk/ is probably a good start since I don't think anything of any value is in there
+# the trailing "/" tells it to ignore the entire folder.
+Less/Junk/
